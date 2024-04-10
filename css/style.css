@@ -604,6 +604,10 @@ video {
   width: 70px;
 }
 
+.w-\[95vw\] {
+  width: 95vw;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -788,4 +792,10 @@ video {
 .dark\:text-white:is(.dark *) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  .md\:w-\[600px\] {
+    width: 600px;
+  }
 }
