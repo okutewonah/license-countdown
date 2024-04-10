@@ -17,18 +17,29 @@
       }
     </style>
     <script>
-      if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-          document.querySelector('html').classList.add('dark');
+      if (
+        localStorage.getItem("dark-mode") === "true" ||
+        (!("dark-mode" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.querySelector("html").classList.add("dark");
       } else {
-          document.querySelector('html').classList.remove('dark');
+        document.querySelector("html").classList.remove("dark");
       }
-      </script>
+    </script>
   </head>
-  <body class="bg-white dark:bg-[#0B0124] flex min-h-screen justify-center items-center">
+  <body
+    class="bg-white dark:bg-[#141C2C] flex min-h-screen justify-center items-center"
+  >
     <main>
       <div class="flex justify-end my-2">
-        <input type="checkbox" name="light-switch" id="light-switch" class="sr-only" />
-        <label for="light-switch" class="relative cursor-pointer p-3"></label>
+        <input
+          type="checkbox"
+          name="light-switch"
+          id="light-switch"
+          class="sr-only"
+        />
+        <label for="light-switch" class="relative cursor-pointer p-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
@@ -39,30 +50,30 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-lightbulb stroke-amber-600 dark:stroke-white"
+            class="lucide lucide-lightbulb stroke-black dark:stroke-white"
           >
             <path
               d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
             />
             <path d="M9 18h6" />
             <path d="M10 22h4" /></svg
-          ></label
+          ><span class="sr-only">Switch to light / dark version</span></label
         >
       </div>
       <div
-        class="bg-gray-700 dark:bg-slate-200 h-[400px] w-[600px] rounded-lg shadow-md shadow-gray-400 flex flex-col justify-center"
+        class="dark:bg-inherit bg-inherit border text-black dark:text-white border-black dark:border-white h-[400px] w-[600px] rounded-lg shadow-md flex flex-col justify-center gap-y-9"
       >
         <div class="flex justify-center gap-3">
           <h1
-            class="w-[70px] h-[70px] border text-center font-bold text-[3rem]"
+            class="w-[70px] h-[70px] border rounded text-center font-bold text-[3rem]"
           >
             69
           </h1>
           <p class="my-auto">Days Left</p>
         </div>
-        <div>
-          <div>
-            <h2>10</h2>
+        <div class="flex justify-evenly">
+          <div class="flex flex-col items-center border p-3 rounded">
+            <h2 class="font-semibold">10</h2>
             <span>Hours</span>
           </div>
           <div>
