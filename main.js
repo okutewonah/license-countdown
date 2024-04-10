@@ -1,6 +1,7 @@
 const lightSwitch = document.getElementById("light-switch");
 const days = document.getElementById("days");
 const timeElements = document.querySelectorAll("h2");
+const complete = document.getElementById("complete");
 
 const second = 1000;
 const minute = second * 60;
@@ -28,10 +29,16 @@ const countdown = () => {
     const minutes = Math.floor((distance % hour) / minute);
     const seconds = Math.floor((distance % minute) / second);
 
-    days.innerText = `${remainderDays}`;
-    timeElements[0].textContent = `${hours}`;
-    timeElements[1].textContent = `${minutes}`;
-    timeElements[2].textContent = `${seconds}`;
+    if (distance < 0) {
+      clearInterval(countTimer);
+      complete.innerHTML =
+        "<p class='flex justify-center'>The Countdown is over! <br />Go Get Your License!</p>";
+    } else {
+      days.innerText = `${remainderDays}`;
+      timeElements[0].textContent = `${hours}`;
+      timeElements[1].textContent = `${minutes}`;
+      timeElements[2].textContent = `${seconds}`;
+    }
   }, second);
 };
 
