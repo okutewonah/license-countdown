@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Countdown to Licence Collection</title>
+    <style>
+      body {
+        font-family: "Reddit Mono", monospace;
+      }
+    </style>
+    <script>
+      if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.querySelector('html').classList.add('dark');
+      } else {
+          document.querySelector('html').classList.remove('dark');
+      }
+      </script>
+  </head>
+  <body class="bg-white dark:bg-[#0B0124] flex min-h-screen justify-center items-center">
+    <main>
+      <div class="flex justify-end my-2">
+        <input type="checkbox" name="light-switch" id="light-switch" class="sr-only" />
+        <label for="light-switch" class="relative cursor-pointer p-3"></label>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-lightbulb stroke-amber-600 dark:stroke-white"
+          >
+            <path
+              d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"
+            />
+            <path d="M9 18h6" />
+            <path d="M10 22h4" /></svg
+          ></label
+        >
+      </div>
+      <div
+        class="bg-gray-700 dark:bg-slate-200 h-[400px] w-[600px] rounded-lg shadow-md shadow-gray-400 flex flex-col justify-center"
+      >
+        <div class="flex justify-center gap-3">
+          <h1
+            class="w-[70px] h-[70px] border text-center font-bold text-[3rem]"
+          >
+            69
+          </h1>
+          <p class="my-auto">Days Left</p>
+        </div>
+        <div>
+          <div>
+            <h2>10</h2>
+            <span>Hours</span>
+          </div>
+          <div>
+            <h2>44</h2>
+            <span>Minutes</span>
+          </div>
+          <div>
+            <h2>23</h2>
+            <span>Seconds</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
