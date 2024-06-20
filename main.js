@@ -2,6 +2,7 @@ const lightSwitch = document.getElementById("light-switch");
 const days = document.getElementById("days");
 const timeElements = document.querySelectorAll("h2");
 const complete = document.getElementById("complete");
+const countdownContainer = document.getElementById("countdown-container");
 
 const second = 1000;
 const minute = second * 60;
@@ -33,6 +34,7 @@ const countdown = () => {
       clearInterval(countTimer);
       complete.innerHTML =
         "<p class='flex justify-center'>The Countdown is over! <br />Go Get Your License!</p>";
+        countdownContainer.classList.add("hidden");
     } else {
       days.innerText = `${remainderDays}`;
       timeElements[0].textContent = `${hours}`;
