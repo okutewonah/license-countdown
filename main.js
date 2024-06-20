@@ -34,6 +34,7 @@ const countdown = () => {
       clearInterval(countTimer);
       complete.innerHTML =
         "<p class='flex justify-center'>The Countdown is over! <br />Go Get Your License!</p>";
+        countdownContainer.classList.remove("flex");
         countdownContainer.classList.add("hidden");
     } else {
       days.innerText = `${remainderDays}`;
